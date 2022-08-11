@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <Menubar :model="items" exact="true" class="menu-bar">
+    <Menubar :model="items" class="menu-bar">
       <template #start>
         <router-link to="/">
           <img alt="logo" src="@/assets/logo.svg" height="20" class="mr-2 logo" />
@@ -64,7 +64,7 @@ export default {
             {
               label: 'New',
               icon: 'pi pi-fw pi-user-plus',
-
+              to: '/users/new'
             },
             {
               label: 'Delete',
@@ -84,6 +84,10 @@ export default {
 </script>
 
 <style>
+html {
+    font-size: 12px;
+}
+
 #app {
   width: 100%;
 }
